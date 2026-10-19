@@ -67,11 +67,11 @@ static class Constants
     public const string AUTH_ENDPOINT = "http://vscodev.com/api/license/vscokeys";
     public const bool AUTH_ENDPOINT_HAS_AUTH = true;
     public const string AUTH_AUTH_USER = "vsco";
-    public const string AUTH_AUTH_PASSWORD = "shooteditshare";
+    public static readonly string AUTH_AUTH_PASSWORD = System.Environment.GetEnvironmentVariable("VSCO_KEYS_AUTH_AUTH_PASSWORD") ?? string.Empty;
     public const string VERSION_ENDPOINT = "http://vscodev.com/api/vscokeys/version/";
     public const bool VERSION_ENDPOINT_HAS_AUTH = true;
     public const string VERSION_AUTH_USER = "vsco";
-    public const string VERSION_AUTH_PASSWORD = "shooteditshare";
+    public static readonly string VERSION_AUTH_PASSWORD = System.Environment.GetEnvironmentVariable("VSCO_KEYS_VERSION_AUTH_PASSWORD") ?? string.Empty;
     public const string WEB_GET_LICENSE = "http://vsco:shooteditshare@vscodev.com/tools/vscokeys";
     public const string WEB_CREATE_NEW_ENDPOINT = "http://vsco:shooteditshare@vscodev.com/vscokeys/customize";
     public const string WEB_USER_KEYS = "http://vsco:shooteditshare@vscodev.com/user/vscokeys/";
@@ -81,7 +81,7 @@ static class Constants
     public const string WEB_KEYS_ENDPOINT = "http://vscodev.com/vscokeys/";
     public const bool WEB_KEYS_ENDPOINT_HAS_AUTH = true;
     public const string WEB_KEYS_ENDPOINT_USER = "vsco";
-    public const string WEB_KEYS_ENDPOINT_PASSWORD = "shooteditshare";
+    public static readonly string WEB_KEYS_ENDPOINT_PASSWORD = System.Environment.GetEnvironmentVariable("VSCO_KEYS_WEB_KEYS_ENDPOINT_PASSWORD") ?? string.Empty;
     public const string WEB_QUICK_START = "http://vsco:shooteditshare@vscodev.com/vscokeys/quickstart/";
 
 #else
@@ -108,8 +108,6 @@ static class Constants
 
 #endif
 
-    public const string AUTH_APPID = "b9949d64d1fb109c293590c6ed763a21";
-    public const string AUTH_SECRET = "510faef8f4c470006ab250894ffced24";
     public const string AUTH_UUID_NAME = "uuid";
     public const string AUTH_APPID_NAME = "appid";
     public const string AUTH_TOKEN_NAME = "tkn";
