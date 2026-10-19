@@ -88,8 +88,6 @@
 
 #endif
 
-#define AUTH_APPID @"b9949d64d1fb109c293590c6ed763a21"
-#define AUTH_SECRET @"510faef8f4c470006ab250894ffced24"
 #define AUTH_UUID_NAME @"uuid"
 #define AUTH_APPID_NAME @"appid"
 #define AUTH_TOKEN_NAME @"tkn"
